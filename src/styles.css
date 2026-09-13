@@ -142,3 +142,57 @@
     color: var(--color-foreground);
   }
 }
+
+/* --- Identité visuelle Hanane Alaoui --- */
+:root {
+  --background: oklch(0.995 0.005 190);
+  --foreground: oklch(0.24 0.03 210);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.03 210);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.03 210);
+  --primary: oklch(0.52 0.09 197);
+  --primary-foreground: oklch(0.99 0.01 190);
+  --primary-deep: oklch(0.36 0.07 198);
+  --primary-soft: oklch(0.95 0.025 195);
+  --secondary: oklch(0.95 0.03 175);
+  --secondary-foreground: oklch(0.32 0.05 198);
+  --muted: oklch(0.96 0.012 195);
+  --muted-foreground: oklch(0.5 0.03 205);
+  --accent: oklch(0.66 0.11 165);
+  --accent-foreground: oklch(0.99 0.01 190);
+  --urgent: oklch(0.58 0.18 25);
+  --urgent-foreground: oklch(0.99 0.01 60);
+  --whatsapp: oklch(0.63 0.15 148);
+  --whatsapp-foreground: oklch(0.99 0.01 148);
+  --border: oklch(0.9 0.018 195);
+  --input: oklch(0.9 0.018 195);
+  --ring: oklch(0.52 0.09 197);
+  --radius: 0.9rem;
+  --shadow-soft: 0 18px 40px -24px oklch(0.36 0.07 198 / 0.45);
+  --shadow-card: 0 10px 28px -20px oklch(0.36 0.07 198 / 0.5);
+}
+
+@theme inline {
+  --color-primary-deep: var(--primary-deep);
+  --color-primary-soft: var(--primary-soft);
+  --color-urgent: var(--urgent);
+  --color-urgent-foreground: var(--urgent-foreground);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-foreground: var(--whatsapp-foreground);
+  --font-sans: "Inter", "Noto Kufi Arabic", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", "Noto Kufi Arabic", Georgia, serif;
+}
+
+html[dir="rtl"] body {
+  font-family: "Noto Kufi Arabic", "Inter", sans-serif;
+  letter-spacing: 0;
+}
+
+html[dir="rtl"] .font-display {
+  font-family: "Noto Kufi Arabic", serif;
+}
+
+@utility soft-panel {
+  background: linear-gradient(160deg, var(--primary-soft), oklch(1 0 0));
+}
