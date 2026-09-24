@@ -38,7 +38,7 @@ import {
   WHATSAPP,
   content,
 } from "@/lib/content";
-import logo from "@/assets/logo-hanane-alaoui.png.asset.json";
+import logo from "@/assets/logo-hanane-alaoui.svg";
 import heroImage from "@/assets/hero-soins-domicile.jpg";
 
 export const Route = createFileRoute("/")({
@@ -119,7 +119,7 @@ function Header() {
       <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-3 sm:px-6">
         <a href="#top" className="flex min-w-0 items-center gap-3">
           <img
-            src={logo.url}
+            src={logo}
             alt=""
             width={48}
             height={48}
@@ -326,18 +326,19 @@ function Zone() {
               ))}
             </ul>
           </div>
-          <div className="relative mx-auto grid aspect-square w-full max-w-md place-items-center rounded-full border border-dashed border-primary/35 soft-panel">
-            <div className="grid size-[72%] place-items-center rounded-full border border-dashed border-primary/45 bg-background/50">
-              <div className="grid size-[55%] place-items-center rounded-full bg-primary text-primary-foreground shadow-[var(--shadow-soft)]">
+          <div className="zone-visual relative mx-auto w-full max-w-md">
+            <div className="zone-orbit zone-orbit-1" />
+            <div className="zone-orbit zone-orbit-2" />
+            <div className="zone-orbit zone-orbit-3" />
+            <div className="zone-center">
+              <div className="zone-core">
                 <div className="text-center">
                   <MapPin className="mx-auto size-6" aria-hidden />
                   <p className="mt-1 font-display text-lg font-bold">{t.zone.center}</p>
                 </div>
               </div>
             </div>
-            <span className="absolute bottom-5 rounded-full bg-card px-4 py-1.5 text-sm font-semibold text-primary-deep shadow-[var(--shadow-card)]">
-              {t.zone.radius}
-            </span>
+            <span className="zone-badge">{t.zone.radius}</span>
           </div>
         </div>
       </div>
@@ -473,7 +474,7 @@ function Footer() {
   return (
     <footer className="border-t border-border bg-primary-soft/60 pb-28 lg:pb-10">
       <div className="mx-auto max-w-6xl px-4 py-10 text-center sm:px-6">
-        <img src={logo.url} alt="" width={56} height={56} className="mx-auto size-14 rounded-full object-cover object-top" />
+        <img src={logo} alt="" width={56} height={56} className="mx-auto size-14 rounded-full object-cover object-top" />
         <p className="mt-4 font-display font-bold text-primary-deep">{t.footer.rights}</p>
         <p className="mt-2 text-sm text-muted-foreground">{t.footer.disclaimer}</p>
         <p className="mt-4 text-sm text-muted-foreground">

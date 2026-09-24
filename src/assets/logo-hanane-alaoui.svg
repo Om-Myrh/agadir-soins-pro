@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Hanane Alaoui logo">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ebf9ff" />
+      <stop offset="100%" stop-color="#dff7ef" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="42" fill="url(#bg)"/>
+  <circle cx="100" cy="100" r="69" fill="#eaf7ff" stroke="#2c7da0" stroke-width="5"/>
+  <path d="M84 59h32v27h35v32h-35v35H84v-35H49V86h35V59z" fill="#2c7da0" opacity="0.9"/>
+  <path d="M100 59h18v82h-18V59zm-41 41h82v18H59v-18z" fill="#1f8d7a" opacity="0.9"/>
+  <path d="M63 122c9-11 22-18 37-18s28 7 37 18" fill="none" stroke="#1f8d7a" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+  <circle cx="100" cy="100" r="6" fill="#1f8d7a"/>
+</svg>
