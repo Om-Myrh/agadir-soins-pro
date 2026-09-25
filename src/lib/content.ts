@@ -26,10 +26,25 @@ type Content = {
   };
   why: { title: string; subtitle: string; items: { title: string; text: string }[] };
   services: { title: string; subtitle: string; items: string[]; note: string };
-  zone: { title: string; subtitle: string; text: string; areas: string[]; radius: string; center: string };
+  zone: {
+    title: string;
+    subtitle: string;
+    text: string;
+    areas: string[];
+    radius: string;
+    center: string;
+  };
   availability: { title: string; items: { title: string; text: string }[] };
   about: { title: string; paragraphs: string[] };
-  pricing: { title: string; cash: string; cashText: string; noInsurance: string; noInsuranceText: string; quote: string; quoteText: string };
+  pricing: {
+    title: string;
+    cash: string;
+    cashText: string;
+    noInsurance: string;
+    noInsuranceText: string;
+    quote: string;
+    quoteText: string;
+  };
   contact: {
     title: string;
     subtitle: string;
@@ -145,8 +160,14 @@ export const content: Record<Lang, Content> = {
       title: "Disponibilité & réactivité",
       items: [
         { title: "7j/7", text: "Du lundi au dimanche, week-ends et jours fériés inclus." },
-        { title: "Urgences de nuit", text: "Interventions nocturnes possibles selon la disponibilité." },
-        { title: "Délai estimé", text: "Appelez ou écrivez sur WhatsApp : je vous indique aussitôt le délai selon votre localisation." },
+        {
+          title: "Urgences de nuit",
+          text: "Interventions nocturnes possibles selon la disponibilité.",
+        },
+        {
+          title: "Délai estimé",
+          text: "Appelez ou écrivez sur WhatsApp : je vous indique aussitôt le délai selon votre localisation.",
+        },
       ],
     },
     about: {
@@ -162,9 +183,11 @@ export const content: Record<Lang, Content> = {
       cash: "Paiement en espèces uniquement",
       cashText: "Le règlement s'effectue en espèces, à l'issue de l'intervention.",
       noInsurance: "Aucune prise en charge",
-      noInsuranceText: "Les soins ne sont pas pris en charge par la CNSS, la CNOPS ni par les assurances privées.",
+      noInsuranceText:
+        "Les soins ne sont pas pris en charge par la CNSS, la CNOPS ni par les assurances privées.",
       quote: "Devis rapide",
-      quoteText: "Le tarif dépend de l'acte réalisé et du déplacement. Un appel ou un message WhatsApp suffit pour obtenir une estimation claire.",
+      quoteText:
+        "Le tarif dépend de l'acte réalisé et du déplacement. Un appel ou un message WhatsApp suffit pour obtenir une estimation claire.",
     },
     contact: {
       title: "Contact",
@@ -287,7 +310,10 @@ export const content: Record<Lang, Content> = {
       items: [
         { title: "7 أيام في الأسبوع", text: "من الاثنين إلى الأحد، بما في ذلك العطل والأعياد." },
         { title: "الحالات المستعجلة ليلاً", text: "إمكانية التدخل الليلي حسب التوفر." },
-        { title: "مدة الوصول", text: "اتصلوا أو راسلوني عبر واتساب، وسأخبركم فورًا بمدة الوصول حسب موقعكم." },
+        {
+          title: "مدة الوصول",
+          text: "اتصلوا أو راسلوني عبر واتساب، وسأخبركم فورًا بمدة الوصول حسب موقعكم.",
+        },
       ],
     },
     about: {
@@ -303,9 +329,11 @@ export const content: Record<Lang, Content> = {
       cash: "الأداء نقدًا فقط",
       cashText: "يتم الأداء نقدًا بعد انتهاء التدخل.",
       noInsurance: "بدون تغطية صحية",
-      noInsuranceText: "الخدمات غير مغطاة من طرف الصندوق الوطني للضمان الاجتماعي (CNSS) ولا CNOPS ولا شركات التأمين الخاصة.",
+      noInsuranceText:
+        "الخدمات غير مغطاة من طرف الصندوق الوطني للضمان الاجتماعي (CNSS) ولا CNOPS ولا شركات التأمين الخاصة.",
       quote: "تقدير سريع للثمن",
-      quoteText: "يتوقف الثمن على نوع العمل التمريضي وعلى التنقل. تكفي مكالمة أو رسالة واتساب للحصول على تقدير واضح.",
+      quoteText:
+        "يتوقف الثمن على نوع العمل التمريضي وعلى التنقل. تكفي مكالمة أو رسالة واتساب للحصول على تقدير واضح.",
     },
     contact: {
       title: "الاتصال",

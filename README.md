@@ -5,6 +5,7 @@ Crée un site vitrine professionnel pour Hanane Alaoui, infirmière libérale à
 Le site doit être entièrement bilingue Français / Arabe avec un sélecteur de langue visible dans l'en-tête, et supporter un affichage RTL (right-to-left) complet et soigné lorsque la langue arabe est sélectionnée. Fournis les traductions professionnelles en arabe pour l'ensemble des textes et sections.
 
 Contenu et structure :
+
 - En-tête / Navigation : Logo/nom "Hanane Alaoui - Infirmière à domicile", liens de navigation rapide, bouton sélecteur de langue FR / AR (avec gestion RTL automatique), bouton d'appel direct.
 - Hero section :
   - H1 : Hanane Alaoui — Infirmière libérale à Agadir

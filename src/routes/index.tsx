@@ -219,8 +219,12 @@ function Hero() {
           <dl className="mt-9 grid grid-cols-3 gap-3 border-t border-border/70 pt-6">
             {t.hero.stats.map((s) => (
               <div key={s.label}>
-                <dt className="font-display text-2xl font-bold text-primary sm:text-3xl">{s.value}</dt>
-                <dd className="mt-1 text-xs leading-snug text-muted-foreground sm:text-sm">{s.label}</dd>
+                <dt className="font-display text-2xl font-bold text-primary sm:text-3xl">
+                  {s.value}
+                </dt>
+                <dd className="mt-1 text-xs leading-snug text-muted-foreground sm:text-sm">
+                  {s.label}
+                </dd>
               </div>
             ))}
           </dl>
@@ -265,7 +269,9 @@ function Why() {
                 <span className="inline-flex size-11 items-center justify-center rounded-xl bg-primary-soft text-primary">
                   <Icon className="size-5" aria-hidden />
                 </span>
-                <h3 className="mt-4 font-display text-lg font-bold text-primary-deep">{item.title}</h3>
+                <h3 className="mt-4 font-display text-lg font-bold text-primary-deep">
+                  {item.title}
+                </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
               </article>
             );
@@ -352,7 +358,9 @@ function Availability() {
   return (
     <section className="bg-primary-deep py-14 text-primary-foreground sm:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="text-center font-display text-2xl font-bold sm:text-3xl">{t.availability.title}</h2>
+        <h2 className="text-center font-display text-2xl font-bold sm:text-3xl">
+          {t.availability.title}
+        </h2>
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {t.availability.items.map((item, i) => {
             const Icon = icons[i] ?? Clock;
@@ -360,7 +368,9 @@ function Availability() {
               <article key={item.title} className="rounded-2xl bg-primary-foreground/10 p-6">
                 <Icon className="size-6" aria-hidden />
                 <h3 className="mt-4 font-display text-lg font-bold">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-primary-foreground/85">{item.text}</p>
+                <p className="mt-2 text-sm leading-relaxed text-primary-foreground/85">
+                  {item.text}
+                </p>
               </article>
             );
           })}
@@ -405,7 +415,10 @@ function Pricing() {
         <SectionTitle title={t.pricing.title} />
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {cards.map((c) => (
-            <article key={c.title} className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)]">
+            <article
+              key={c.title}
+              className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)]"
+            >
               <span className="inline-flex size-11 items-center justify-center rounded-xl bg-primary-soft text-primary">
                 <c.icon className="size-5" aria-hidden />
               </span>
@@ -422,7 +435,12 @@ function Pricing() {
 function Contact() {
   const { t } = useLanguage();
   const rows = [
-    { icon: Phone, label: t.contact.phone, value: `${PHONE_DISPLAY_FR} (${PHONE_DISPLAY_INTL})`, href: PHONE_TEL },
+    {
+      icon: Phone,
+      label: t.contact.phone,
+      value: `${PHONE_DISPLAY_FR} (${PHONE_DISPLAY_INTL})`,
+      href: PHONE_TEL,
+    },
     { icon: MessageCircle, label: t.contact.whatsapp, value: PHONE_DISPLAY_INTL, href: WHATSAPP },
     { icon: Mail, label: t.contact.email, value: EMAIL, href: `mailto:${EMAIL}` },
     { icon: MapPin, label: t.contact.zone, value: t.contact.zoneValue },
@@ -445,7 +463,9 @@ function Contact() {
                   <r.icon className="size-5 shrink-0 text-primary" aria-hidden />
                   <span className="min-w-0">
                     <span className="block text-xs text-muted-foreground">{r.label}</span>
-                    <span className="block truncate font-semibold text-primary-deep">{r.value}</span>
+                    <span className="block truncate font-semibold text-primary-deep">
+                      {r.value}
+                    </span>
                   </span>
                 </a>
               ) : (
@@ -474,7 +494,13 @@ function Footer() {
   return (
     <footer className="border-t border-border bg-primary-soft/60 pb-28 lg:pb-10">
       <div className="mx-auto max-w-6xl px-4 py-10 text-center sm:px-6">
-        <img src={logo} alt="" width={56} height={56} className="mx-auto size-14 rounded-full object-cover object-top" />
+        <img
+          src={logo}
+          alt=""
+          width={56}
+          height={56}
+          className="mx-auto size-14 rounded-full object-cover object-top"
+        />
         <p className="mt-4 font-display font-bold text-primary-deep">{t.footer.rights}</p>
         <p className="mt-2 text-sm text-muted-foreground">{t.footer.disclaimer}</p>
         <p className="mt-4 text-sm text-muted-foreground">
