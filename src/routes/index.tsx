@@ -32,7 +32,6 @@ import {
 import { LanguageProvider, useLanguage } from "@/lib/language";
 import {
   EMAIL,
-  PHONE_DISPLAY_FR,
   PHONE_DISPLAY_INTL,
   PHONE_TEL,
   WHATSAPP,
