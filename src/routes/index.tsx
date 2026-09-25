@@ -38,7 +38,7 @@ import {
   content,
 } from "@/lib/content";
 import logo from "@/assets/logo-hanane-alaoui.svg";
-import heroImage from "@/assets/hanane-portrait.jpg.asset.json";
+import heroImageUrl from "@/assets/hanane-portrait.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -230,7 +230,7 @@ function Hero() {
         </div>
         <div className="relative">
           <img
-            src={heroImage.url}
+            src={heroImageUrl}
             alt={t.hero.imageAlt}
             width={1280}
             height={1600}
