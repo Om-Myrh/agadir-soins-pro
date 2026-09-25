@@ -32,7 +32,6 @@ import {
 import { LanguageProvider, useLanguage } from "@/lib/language";
 import {
   EMAIL,
-  PHONE_DISPLAY_FR,
   PHONE_DISPLAY_INTL,
   PHONE_TEL,
   WHATSAPP,
@@ -438,7 +437,7 @@ function Contact() {
     {
       icon: Phone,
       label: t.contact.phone,
-      value: `${PHONE_DISPLAY_FR} (${PHONE_DISPLAY_INTL})`,
+      value: PHONE_DISPLAY_INTL,
       href: PHONE_TEL,
     },
     { icon: MessageCircle, label: t.contact.whatsapp, value: PHONE_DISPLAY_INTL, href: WHATSAPP },
