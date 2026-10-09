@@ -40,15 +40,80 @@ import {
 import logo from "@/assets/logo-hanane-alaoui.svg";
 import heroImageUrl from "@/assets/hanane-portrait.jpg";
 
+const SITE_URL = "https://infirmiereagadir.netlify.app";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: content.fr.seo.title },
       { name: "description", content: content.fr.seo.description },
+      {
+        name: "keywords",
+        content:
+          "infirmière Agadir, infirmière à domicile Agadir, soins infirmiers à domicile, prise de sang à domicile Agadir, injection à domicile, pansement, perfusion, infirmière de nuit Agadir, ممرضة بالمنزل أكادير",
+      },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { name: "geo.region", content: "MA-AGD" },
+      { name: "geo.placename", content: "Agadir" },
+      { name: "geo.position", content: "30.4278;-9.5981" },
+      { name: "ICBM", content: "30.4278, -9.5981" },
       { property: "og:title", content: content.fr.seo.title },
       { property: "og:description", content: content.fr.seo.description },
+      { property: "og:url", content: SITE_URL + "/" },
+      { property: "og:locale", content: "fr_MA" },
+      { property: "og:locale:alternate", content: "ar_MA" },
+      { property: "og:site_name", content: "Hanane Alaoui — Infirmière à Agadir" },
       { name: "twitter:title", content: content.fr.seo.title },
       { name: "twitter:description", content: content.fr.seo.description },
+    ],
+    links: [{ rel: "canonical", href: SITE_URL + "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": ["MedicalBusiness", "LocalBusiness"],
+          "@id": SITE_URL + "/#business",
+          name: "Hanane Alaoui — Infirmière à domicile",
+          alternateName: "حنان العلوي — ممرضة بالمنزل",
+          description: content.fr.seo.description,
+          url: SITE_URL + "/",
+          telephone: "+212666064369",
+          email: EMAIL,
+          medicalSpecialty: "Nursing",
+          priceRange: "Sur devis",
+          paymentAccepted: "Cash",
+          currenciesAccepted: "MAD",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Agadir",
+            addressRegion: "Souss-Massa",
+            addressCountry: "MA",
+          },
+          geo: { "@type": "GeoCoordinates", latitude: 30.4278, longitude: -9.5981 },
+          areaServed: {
+            "@type": "GeoCircle",
+            geoMidpoint: { "@type": "GeoCoordinates", latitude: 30.4278, longitude: -9.5981 },
+            geoRadius: 30000,
+          },
+          openingHoursSpecification: {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            opens: "00:00",
+            closes: "23:59",
+          },
+          availableLanguage: ["fr", "ar"],
+          founder: { "@type": "Person", name: "Hanane Alaoui", jobTitle: "Infirmière libérale" },
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Soins infirmiers à domicile",
+            itemListElement: content.fr.services.items.map((s) => ({
+              "@type": "Offer",
+              itemOffered: { "@type": "MedicalProcedure", name: s },
+            })),
+          },
+        }),
+      },
     ],
   }),
   component: () => (
