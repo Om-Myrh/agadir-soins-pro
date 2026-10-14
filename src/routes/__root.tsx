@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
   type ErrorComponentProps,
@@ -105,8 +106,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  const isArabic = useRouterState({
+    select: (s) => s.location.pathname === "/ar" || s.location.pathname.startsWith("/ar/"),
+  });
   return (
-    <html lang="fr">
+    <html lang={isArabic ? "ar" : "fr"} dir={isArabic ? "rtl" : "ltr"}>
       <head>
         <meta
           name="google-site-verification"
