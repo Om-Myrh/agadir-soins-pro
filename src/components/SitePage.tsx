@@ -1,5 +1,4 @@
 /* eslint-disable react-refresh/only-export-components */
-import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   Phone,
@@ -87,7 +86,7 @@ function WhatsAppButton({ label, className = "" }: { label: string; className?: 
 }
 
 function Header() {
-  const { t, toggle, rtl } = useLanguage();
+  const { t, rtl } = useLanguage();
   const [open, setOpen] = useState(false);
 
   const links = [
@@ -132,15 +131,15 @@ function Header() {
             ))}
           </nav>
 
-          <button
-            type="button"
-            onClick={toggle}
+          <Link
+            to={rtl ? "/" : "/ar"}
+            hrefLang={rtl ? "fr" : "ar"}
             className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-primary/30 px-3 py-2 text-sm font-semibold text-primary-deep transition hover:bg-primary-soft"
             aria-label={rtl ? "Passer en français" : "التبديل إلى العربية"}
           >
             <Languages className="size-4" aria-hidden />
             {t.langLabel}
-          </button>
+          </Link>
 
           <a
             href={PHONE_TEL}
