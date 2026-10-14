@@ -10,3 +10,4 @@
 > the editor, so keep the branch in a working state.
 
 <!-- LOVABLE:END -->
+- Each language has its own route (/ for French, /ar for Arabic) sharing src/components/SitePage.tsx, with hreflang links built in src/lib/seo.ts — so Google indexes both languages.
